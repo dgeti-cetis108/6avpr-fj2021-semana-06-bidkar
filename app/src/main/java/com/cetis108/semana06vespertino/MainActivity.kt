@@ -31,5 +31,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
         }
+
+        val buttonGoToThird = findViewById<Button>(R.id.btn_main_gotothird)
+        buttonGoToThird.setOnClickListener {
+            val intent = Intent(this, ThirdActivity::class.java)
+            intent.putExtra("saludo", "Hola desde MainActivity")
+            startActivity(intent)
+        }
     }
 }
